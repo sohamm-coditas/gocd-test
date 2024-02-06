@@ -10,7 +10,7 @@ pipelines:
         git: https://github.com/sohamm-coditas/gocd-test.git
         shallow_clone: false
         auto_update: true
-        branch: main
+        branch: "{branch_name}"
     stages:
     - test:
         fetch_materials: true
@@ -29,5 +29,5 @@ pipelines:
                 command: cat
                 run_if: passed
     parameters:
-      BRANCH: dev
+      branch_name: dev
       
