@@ -1,12 +1,12 @@
 format_version: 10
 pipelines:
-  test-pipeline-2:
+  test-pipeline-3:
     group: defaultGroup
     label_template: ${COUNT}
     lock_behavior: none
     display_order: -1
     materials:
-      git-fecc9ee:
+      git-183b0b5:
         git: https://github.com/sohamm-coditas/gocd-test.git
         shallow_clone: false
         auto_update: true
@@ -28,3 +28,5 @@ pipelines:
                 - sample.txt
                 command: cat
                 run_if: passed
+    parameters:
+      BRANCH: dev
