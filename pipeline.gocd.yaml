@@ -11,6 +11,12 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: main
+      git-f54eb88:
+        git: https://github.com/sohamm-coditas/gocd-test.git
+        shallow_clone: false
+        auto_update: true
+        branch: dev
+  
     stages:
     - Test:
         fetch_materials: true
