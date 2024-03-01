@@ -3,6 +3,8 @@ pipelines:
   test2:
     group: defaultGroup
     label_template: ${COUNT}
+    environment_variables:
+      BRANCH_NAME: main
     lock_behavior: none
     display_order: -1
     materials:
@@ -10,7 +12,7 @@ pipelines:
         git: https://github.com/sohamm-coditas/gocd-test.git
         shallow_clone: false
         auto_update: true
-        branch: ${branch}
+        branch: $BRANCH_NAME
     stages:
     - Test:
         fetch_materials: true
